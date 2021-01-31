@@ -16,7 +16,6 @@ function App() {
         <Route path="/about" exact component={About} />
       </header>
     </div>
-    
     </Router>
   );
 }
