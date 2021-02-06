@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import facile from './facile.png';
 import './App.css';
 import Login from './Login';
 import Profile from './Profile';
@@ -10,12 +10,10 @@ import { HashRouter as Router,
 function App() {
   return (
     <Router>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></link>
       <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Main Component
-        </p>
+        <img src={facile} className="App-logo" alt="facile" />
         <Route exact path="/"><Redirect to="/login" /></Route>
         <Route path="/login" exact component={Login} />
         <Route path="/profile" exact component={Profile} />
