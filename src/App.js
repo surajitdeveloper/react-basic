@@ -1,8 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Home from './Home';
-import About from './About';
-import { HashRouter as Router, Route } from "react-router-dom"; //, Link , BrowserRouter as Router,
+import Login from './Login';
+import Profile from './Profile';
+import { HashRouter as Router, 
+  Switch,
+  Route,
+  Link,
+  Redirect } from "react-router-dom"; //, Link , BrowserRouter as Router,
 function App() {
   return (
     <Router>
@@ -12,8 +16,9 @@ function App() {
         <p>
           Main Component
         </p>
-        <Route path="/home" exact component={Home} />
-        <Route path="/about" exact component={About} />
+        <Route exact path="/"><Redirect to="/login" /></Route>
+        <Route path="/login" exact component={Login} />
+        <Route path="/profile" exact component={Profile} />
       </header>
     </div>
     </Router>
