@@ -1,11 +1,14 @@
 
+import React from 'react';
 
-function Profile() {
-  return (
-    <div className="App">
+class Profile extends React.Component {
+  render() {
+    return (
+      <div className="App">
       Profile Component
     </div>
-  );
+    );
+  }
 }
 
 export default Profile;
