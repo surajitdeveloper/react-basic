@@ -3,14 +3,14 @@ import './App.css';
 import Login from './Login';
 import Profile from './Profile';
 import { HashRouter as Router, 
-  Switch,
+  // Switch,
   Route,
-  Link,
+  // Link,
   Redirect } from "react-router-dom"; //, Link , BrowserRouter as Router,
 function App() {
   return (
     <Router>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></link>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous"></link>
       <div className="App">
       <header className="App-header">
         <img src={facile} className="App-logo" alt="facile" />
