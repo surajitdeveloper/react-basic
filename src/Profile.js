@@ -14,7 +14,7 @@ class Profile extends React.Component {
       <p>
       Welcome <b>Saswati Mohanty</b>
       </p>
-      <button onClick={this.logout}>Logout</button>
+      <button className="btn btn-lg btn-primary btn-block" onClick={this.logout}>Logout</button>
     </div>
     );
   }
