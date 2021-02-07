@@ -1,6 +1,4 @@
 import React from 'react';
-// import { useHistory, browserHistory,
-//   Redirect } from "react-router-dom";
 class Login extends React.Component {
   constructor(props) {
     super(props);
