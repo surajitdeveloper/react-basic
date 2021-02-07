@@ -1,44 +1,22 @@
 import React from 'react';
 class Login extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: '',
-      password: ''
-    };
-    this.handleClick = this.handleClick.bind(this)
-  }
-  updateInputValue(type,evt) {
-    switch(type)
+  
+  handleClick()
+  {
+    const username = "saswati";
+    const password = "1234";
+    let userLogin = document.getElementById("username").value;
+    let userPassword = document.getElementById("password").value;
+    if(userLogin == username && userPassword == password)
     {
-      case 'username':
-        this.setState({
-          username: evt.target.value
-        });
-        break;
-      case 'password':
-        this.setState({
-          password: evt.target.value
-        });
-        break;
-      default:
-        break;
+      localStorage.token = "1";
+      window.location.href="/#/profile";
+    }
+    else
+    {
+      alert("invalid credential");
     }
   }
-handleClick = () =>
-{
-  const username = "saswati";
-  const password = "1234";
-  if(this.state.username == username && this.state.password == password)
-  {
-    localStorage.token = "1";
-    window.location.href="/#/profile";
-  }
-  else
-  {
-    alert("invalid credential");
-  }
-}
 
   render() {
     if(localStorage.token) {window.location.href="/#/profile"; return false;}
@@ -47,8 +25,8 @@ handleClick = () =>
       <div className="wrapper">
         <div className="form-signin">
         <h2 className="form-signin-heading">Please login</h2>
-        <input type="text" value={this.state.username} onChange={evt => this.updateInputValue("username", evt)} className="form-control" name="username" placeholder="Username" required="" />
-        <input type="password" value={this.state.password} onChange={evt => this.updateInputValue("password", evt)} className="form-control" name="password" placeholder="Password" required="" />      
+        <input type="text" id="username" className="form-control" name="username" placeholder="Username" required="" />
+        <input type="password" id="password" className="form-control" name="password" placeholder="Password" required="" />      
         <button onClick={ this.handleClick } className="btn btn-lg btn-primary btn-block" type="submit">Login</button>
         </div>
       </div>
